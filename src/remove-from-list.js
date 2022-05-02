@@ -23,15 +23,15 @@ const { NotImplementedError } = require('../extensions/index.js');
  * }
  */
 function removeKFromList(l, k) {
-  if (l.value === k) { // если текущее значение равно к
-    l = l.next // переходим к следующему
+  if (l.value === k) { 
+    l = l.next 
   }
-  let currentList = l // сейчас = л
-  while (currentList.next) { // пока есть следующий элемент
-    if (currentList.next.value === k) { // если следубщее значение равно к
-        currentList.next = currentList.next.next // следующее = следющее+следующее (перепрыгиваем)
-    } else { // если не равно
-        currentList = currentList.next // сменили текущее на следующее
+  let currentList = l
+  while (currentList.next) { 
+    if (currentList.next.value === k) { 
+        currentList.next = currentList.next.next 
+    } else { 
+        currentList = currentList.next 
     }
   }
   return l;
